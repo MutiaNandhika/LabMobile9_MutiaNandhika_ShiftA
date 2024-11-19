@@ -119,5 +119,23 @@ Berikut adalah penjelasan mengenai proses autentikasi dan pengambilan profil pen
   Fungsi `handleStatus()` memanggil `updateStatus()` dan me-refresh daftar setelah status diperbarui.  
   Status Todo diperbarui di Firestore, dan data akan berpindah antara daftar **Active Todos** dan **Completed Todos**.
   
+## Backend (Firebase Firestore)
+
+### Firestore Database
+- Basis data berbasis **NoSQL** dengan koleksi `users/{uid}/todos` untuk setiap pengguna.
+- Dokumen dalam koleksi `todos` menyimpan data sebagai objek **JSON** dengan key-value.
+
+### Operasi CRUD Firebase
+1. **Create**:  
+   Menggunakan `addDoc()` untuk menambahkan dokumen baru.
+   
+2. **Read**:  
+   Menggunakan `getDocs()` dengan query untuk membaca data dari Firestore.
+   
+3. **Update**:  
+   Menggunakan `updateDoc()` untuk memperbarui dokumen berdasarkan ID.
+   
+4. **Delete**:  
+   Menggunakan `deleteDoc()` untuk menghapus dokumen berdasarkan ID.
 
 ---
