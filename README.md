@@ -139,3 +139,136 @@ Berikut adalah penjelasan mengenai proses autentikasi dan pengambilan profil pen
    Menggunakan `deleteDoc()` untuk menghapus dokumen berdasarkan ID.
 
 ---
+## Build Ionic ke bentuk Apk
+
+Berikut adalah langkah-langkah untuk Build Aplikasi Ionic ke Format APK menggunakan Capacitor:
+
+## Langkah 1: Build Aplikasi Ionic
+
+- **Bangun Aplikasi Ionic**:
+  - Jalankan perintah berikut di terminal untuk memproses aplikasi Ionic Anda:
+    ```bash
+    ionic build
+    ```
+  - Perintah ini akan menghasilkan folder `dist` atau `www` yang berisi file web aplikasi Anda.
+
+- **Screenshot**:
+
+  <img src="https://github.com/user-attachments/assets/ce53c960-6c58-4c29-95bf-9f78a248ffde" alt="Screenshot" width="400"/>
+
+- **Pastikan Dependensi Capacitor Terinstal**:
+  - Untuk memastikan semuanya berjalan lancar, jalankan perintah berikut di terminal untuk menginstal atau memperbarui dependensi Capacitor:
+    ```bash
+    npm install @capacitor/core@^6.2.0
+    npm install @capacitor/android
+    ```
+
+- **Screenshot**:
+
+  <img src="https://github.com/user-attachments/assets/02612438-2004-4fe7-8da2-61b2c9a7ef84" alt="Screenshot" width="400"/>
+  <img src="https://github.com/user-attachments/assets/e89dcb1a-ff6e-42e5-8300-ead58debc940" alt="Screenshot" width="400"/>
+
+- **Tambahkan Dukungan Android ke Proyek Ionic**:
+  - Gunakan perintah berikut untuk menambahkan platform Android ke proyek Ionic Anda:
+    ```bash
+    npx cap add android
+    ```
+
+- **Screenshot**:
+
+  <img src="https://github.com/user-attachments/assets/8bd9156e-a765-4b03-a977-8675cc09588e" alt="Screenshot" width="400"/>
+
+- **Sinkronkan Aset Web ke Proyek Android**:
+  - Transfer file web (dist atau www) ke proyek Android dengan menjalankan perintah berikut:
+    ```bash
+    npx cap sync android
+    ```
+
+- **Screenshot**:
+
+  <img src="https://github.com/user-attachments/assets/479ff046-f068-4d59-ac69-d71da0ca0312" alt="Screenshot" width="400"/>
+
+
+## Langkah 2: Buka Proyek di Android Studio
+
+- **Buka Proyek Android**:
+  - Jalankan perintah berikut untuk membuka proyek Android Anda di Android Studio:
+    ```bash
+    npx cap open android
+    ```
+  - Setelah itu, Android Studio akan otomatis membuka proyek Anda.
+
+- **Screenshot**:
+
+  <img src="https://github.com/user-attachments/assets/648a9142-2f81-4167-ace1-c212794f5d44" alt="Screenshot" width="400"/>
+
+
+## Langkah 3: Build APK di Android Studio
+
+- **Akses Menu Build di Android Studio**:
+  - Di Android Studio, klik menu **Build** pada toolbar.
+
+- **Pilih Opsi Build APK**:
+  - Pilih opsi berikut:
+    ```scss
+    Build -> Build Bundle(s) / APK(s) -> Build APK(s)
+    ```
+  - Android Studio akan memulai proses pembuatan file APK.
+
+- **Screenshot**:
+
+  <img src="https://github.com/user-attachments/assets/2f72032c-cd22-4d65-b6c0-3377883d160c" alt="Screenshot" width="400"/>
+
+- **Tunggu Hingga Proses Selesai**:
+  - Setelah proses selesai, Anda akan mendapatkan notifikasi bahwa file APK berhasil dibuat.
+
+- **Temukan File APK**:
+  - Klik tombol **Locate** pada notifikasi untuk langsung membuka lokasi file APK yang telah dibuat.
+
+- **Screenshot**:
+
+  <img src="https://github.com/user-attachments/assets/573b22eb-a38a-4151-b018-c135468d699a" alt="Screenshot" width="400"/>
+  
+## Langkah 4: Lokasi File APK
+
+- **Temukan File app-debug.apk**:
+  - File `app-debug.apk` yang telah Anda buat dapat ditemukan di folder berikut:
+    ```bash
+    android/app/build/outputs/apk/debug
+    ```
+
+- **Screenshot**:
+
+  <img src="https://github.com/user-attachments/assets/7f4bf34c-dee2-4ea6-8c9d-a962b0b96cf1" alt="Screenshot" width="400"/>
+
+## Langkah Install APK di Android
+
+Setelah berhasil membangun file APK menggunakan langkah sebelumnya, berikut adalah langkah-langkah untuk menginstal APK di perangkat Android:
+
+### 1. **Pindahkan File APK ke Perangkat Android**
+- Hubungkan perangkat Android ke komputer menggunakan kabel USB.
+- Salin file **`app-debug.apk`** dari folder berikut: android/app/build/outputs/apk/debug
+- Tempelkan file APK ke folder di perangkat Anda (misalnya, di folder **APK**).
+- **Screenshot**:
+  
+  <img src="https://github.com/user-attachments/assets/77db2eec-0b50-43b9-9cd8-c95695dd60bc" alt="Screenshot" width="200"/>
+
+### 2. **Instal APK**
+- Gunakan aplikasi **File Manager** pada perangkat Anda.
+- Temukan file **`app-debug.apk`** yang telah Anda pindahkan.
+- Ketuk file tersebut dan pilih **Instal**.
+- Tunggu hingga proses instalasi selesai.
+- **Screenshot**:
+  
+  <img src="https://github.com/user-attachments/assets/b52b06c0-2e93-4536-8338-61445d6b7fb4" alt="Screenshot" width="200"/>
+  <img src="https://github.com/user-attachments/assets/6dd07f00-7e60-4664-9f6e-b3db22984b19" alt="Screenshot" width="200"/>
+  <img src="https://github.com/user-attachments/assets/7452a3e4-ca93-42bd-a827-cc6083880a01" alt="Screenshot" width="200"/>
+
+### 3. **Jalankan Aplikasi**
+- Setelah instalasi selesai, pilih **Buka** untuk menjalankan aplikasi langsung.
+- Anda juga dapat menemukan aplikasi di **Layar Utama** atau di **Drawer Aplikasi**.
+- **Screenshot**:
+  
+  <img src="https://github.com/user-attachments/assets/225d9b00-472b-4a16-ae88-d44393813f48" alt="Screenshot" width="200"/>
+  <img src="https://github.com/user-attachments/assets/5440e3b9-552e-477d-97c0-362f3b26422e" alt="Screenshot" width="200"/>
+
